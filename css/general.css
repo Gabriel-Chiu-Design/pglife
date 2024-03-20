@@ -238,6 +238,7 @@ a:hover, button:hover, .swiper-button-prev, .swiper-button-next, li, .filter .ev
 
 .fblink:hover{
     background-image: url(../elements/icons/fb-hover.svg);
+    cursor: pointer;
 }
 
 .iglink{
