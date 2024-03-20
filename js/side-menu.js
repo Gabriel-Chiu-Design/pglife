@@ -18,10 +18,4 @@ $(document).ready(function () {
         $(".side-menu").removeClass("active");
         $(".overlay").removeClass("active");
     });
-
-    $("#live-chat").click(function (e) { 
-        e.preventDefault();
-        window.tidioChatApi.show();
-        window.tidioChatApi.toggle();
-    });
 });
