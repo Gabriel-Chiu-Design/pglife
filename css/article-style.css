@@ -15,19 +15,6 @@
     gap: 48px;
 }
 
-.article-banner{
-    display: flex;
-    align-self: stretch;
-    height: 540px;
-    border-radius: 24px;
-}
-
-.article-banner img{
-    border-radius: 24px;
-    width: 100%;
-    object-fit: cover;
-}
-
 .article-content p{
     color: rgba(0, 0, 0, 0.8);
     font-family: Microsoft JhengHei;
@@ -176,7 +163,7 @@
         font-size: 36px;
     }
     .article-content .content img{
-        height: 300px !important;
+        height: 400px !important;
         border-radius: 12px !important;
     }
     .artile-details .icon{
@@ -212,7 +199,7 @@
         gap: 48px;
     }
     .article-content .content img{
-        height: 280px !important;
+        height: 320px !important;
         border-radius: 12px !important;
     }
     .article-content p{
@@ -235,7 +222,7 @@
         gap: 24px;
     }
     .article-content .content img{
-        height: 200px !important;
+        height: 280px !important;
         border-radius: 12px !important;
     }
     .article-content p{
@@ -269,7 +256,7 @@
         padding: 0 16px;
     }
     .article-content .content img{
-        height: 160px !important;
+        height: 240px !important;
         border-radius: 12px !important;
     }
     .article-content p{
