@@ -22,6 +22,6 @@ $(document).ready(function () {
     $("#live-chat").click(function (e) { 
         e.preventDefault();
         window.tidioChatApi.show();
-        window.tidioChatApi.open();
+        window.tidioChatApi.toggle();
     });
 });
