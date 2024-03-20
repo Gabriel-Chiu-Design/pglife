@@ -78,9 +78,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
-    padding: 48px 15%;
+    padding: 48px 12%;
     text-align: center;
-    background: left 2% center / 96px no-repeat url(../elements/icons/format-quote-open.svg), right 2% center / 96px no-repeat url(../elements/icons/format-quote-close.svg) ;
+    background: left 0% center / 96px no-repeat url(../elements/icons/format-quote-open.svg), right 0% center / 96px no-repeat url(../elements/icons/format-quote-close.svg) ;
 }
 
 .article-content .content img{
