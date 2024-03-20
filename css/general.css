@@ -236,6 +236,10 @@ a:hover, button:hover, .swiper-button-prev, .swiper-button-next, li, .filter .ev
     height: 40px;
 }
 
+.fblink:hover{
+    background-image: url(../elements/icons/fb-hover.svg);
+}
+
 .iglink{
     background-image: url(../elements/icons/ig.svg);
     width: 40px;
