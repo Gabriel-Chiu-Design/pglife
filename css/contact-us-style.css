@@ -1,0 +1,224 @@
+/* --------------- pageheading css --------------- */
+
+.pageheading{
+    color: #000;
+    text-align: center;
+    margin: 200px auto 120px;
+    
+    /* Title/H1 */
+    font-family: Microsoft JhengHei;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 86.4px */
+    letter-spacing: -2.88px;
+}
+
+/* --------------- contact container css --------------- */
+
+.contact-container{
+    display: flex;
+    max-width: 1440px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* --------------- contact box css --------------- */
+
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    width: 25%;
+}
+
+.contact-box .title{
+    align-self: stretch;
+    
+    color: #000;
+    text-align: center;
+    font-family: Microsoft JhengHei;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.contact-box img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-box .btn{
+    display: flex;
+    align-self: stretch;
+    padding: 24px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 100px;
+
+    text-align: center;
+    font-family: Microsoft JhengHei;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+/* --------------- page-end tag css --------------- */
+
+.page-tag{
+    color: #000;
+    text-align: center;
+    font-family: Microsoft JhengHei;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 290;
+    line-height: normal;
+
+    margin: 120px auto;
+}
+
+@media(max-width:1366px){
+    .pageheading{
+        margin: 160px auto 80px;
+        font-size: 54px;
+        font-weight: 700;
+    }
+    .contact-box .title{
+        font-size: 20px;
+    }
+    .contact-container{
+        padding: 0 48px;
+    }
+    .contact-box{
+        gap: 16px;
+    }
+    .contact-box .btn{
+        padding: 16px 0px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .page-tag{
+        font-size: 16px;
+        margin: 80px auto;
+    }
+}
+
+@media(max-width:1024px){
+    .pageheading{
+        margin: 160px auto 80px;
+        font-size: 48px;
+        font-weight: 700;
+    }
+    .contact-container{
+        padding: 0 48px;
+        flex-wrap: wrap;
+    }
+    .contact-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1%;
+        width: 47%;
+    }
+    .contact-box .btn{
+        padding: 16px 0px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .page-tag{
+        font-size: 16px;
+        margin: 48px auto;
+    }
+}
+
+@media(max-width:768px){
+    .pageheading{
+        margin: 160px auto 80px;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .contact-container{
+        padding: 0 24px;
+        flex-wrap: wrap;
+        gap:48px;
+    }
+    .contact-box .title{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .contact-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1%;
+        width: 100%;
+    }
+    .contact-box .btn{
+        padding: 16px 0px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width:414px) {
+    .pageheading{
+        margin: 120px auto 24px;
+    }
+    .contact-container{
+        padding: 0 16px;
+        gap:48px;
+    }
+    .contact-box{
+        gap: 1%;
+        width: 100%;
+    }
+    .contact-box .btn{
+        padding: 16px 0px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .page-tag{
+        font-size: 16px;
+        margin: 24px auto;
+    }
+}
+
+
+/* --------------- button hover css --------------- */
+
+.contact-box.blue .btn{
+    border: 2px solid var(--major-blue-main, #45BAEC);
+    color: var(--major-blue-main, #45BAEC);
+}
+
+.contact-box.blue .btn:hover{
+    background-color: var(--major-blue-main, #45BAEC);
+    color: #DAF1FB;
+}
+
+.contact-box.yellow .btn{
+    border: 2px solid var(--major-blue-main, #F0C11B);
+    color: var(--major-blue-main, #F0C11B);
+}
+
+.contact-box.yellow .btn:hover{
+    background-color: #F0C11B;
+    color: #FCF3D1;
+}
+
+.contact-box.red .btn{
+    border: 2px solid var(--major-blue-main, #EB5231);
+    color: var(--major-blue-main, #EB5231);
+}
+
+.contact-box.red .btn:hover{
+    background-color: var(--major-blue-main, #EB5231);
+    color: #FBDCD6;
+}

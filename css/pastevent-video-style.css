@@ -1,0 +1,728 @@
+/* --------------- pageheading css --------------- */
+
+.pageheading{
+    color: #000;
+    text-align: center;
+    margin: 200px auto 96px;
+
+    /* Title/H1 */
+    font-family: Microsoft JhengHei;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 86.4px */
+    letter-spacing: -2.88px;
+}
+
+/* --------------- media tab css --------------- */
+
+.media{
+    display: flex;
+    max-width: 1366px;
+    flex-direction: column;
+    gap: 48px;
+    margin: 0 auto;
+}
+
+.mediatab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.mediatab a{
+    display: flex;
+    align-self: stretch;
+}
+
+.mediatab .video{
+    display: flex;
+    padding-bottom: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-bottom: 4px solid var(--bn-w-9, #0D0D0D);
+
+    color: var(--bn-w-9, #0D0D0D);
+    text-align: center;
+    /* Title/H4 */
+    font-family: Microsoft JhengHei;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 43.2px */
+    letter-spacing: -0.72px;
+}
+
+.mediatab .photo{
+    display: flex;
+    padding-bottom: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-bottom: 2px solid var(--bn-w-5, #808080);
+
+    color: var(--bn-w-5, #808080);
+    text-align: center;
+    font-family: Microsoft JhengHei;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@media (max-width:1366px) {
+    .pageheading{
+        margin: 160px auto 48px;
+        font-size: 54px;
+    }
+    .media{
+        gap: 48px;
+        margin: 0 48px 48px;
+    }
+}
+@media (max-width:1024px) {
+    .pageheading{
+        margin: 160px auto 48px;
+        font-size: 48px;
+    }
+    .media{
+        gap: 36px;
+        margin: 0 48px 48px;
+    }
+    .mediatab .video{
+        padding-bottom: 8px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .mediatab .photo{
+        padding-bottom: 8px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+@media (max-width:768px) {
+    .pageheading{
+        margin: 120px auto 36px;
+        font-size: 40px;
+    }
+    .media{
+        gap: 24px;
+        margin: 0 24px 48px;
+    }
+    .mediatab .video{
+        padding-bottom: 4px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .mediatab .photo{
+        padding-bottom: 4px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+/* --------------- filter css --------------- */
+
+.filter{
+    display: flex;
+    align-self: stretch;
+    padding: 24px 0px;
+    gap: 24px;
+    border-radius: 24px;
+    align-items: center;
+}
+
+.filter .event{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    position: relative;
+}
+
+.filter .menuheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    padding: 12px 24px;
+}
+
+.filter .menuheader.active{
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    .filtername{
+        color: rgba(0, 0, 0, 0.80);
+    }
+    .icon a{
+        background: center / cover url(../elements/icons/chevron-down-active.svg);
+    }
+}
+
+.filter .filtername{
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Microsoft JhengHei;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.filter .icon a{
+    display:block;
+    width: 40px;
+    height: 40px;
+    background: center / cover url(../elements/icons/chevron-down.svg);
+}
+
+.filter .filter-menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    top: 72px;
+    z-index: 100;
+    border: 0px solid rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    transition: ease 500ms;
+}
+
+.filter .filter-menu.active{
+    height: 240px;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.filter .filter-menu .filter-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 20px;
+    
+    background-color: #FFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Microsoft JhengHei;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.filter .filter-menu .filter-item .icon{
+    height: 24px;
+    width: 24px;
+    background: center / contain no-repeat url(../elements/icons/checkbox.svg);
+}
+
+.filter .filter-menu .filter-item:hover{
+    background: linear-gradient(268deg, rgba(240, 193, 27, 0.5) 1.29%, rgba(235, 82, 49, 0.5) 50.95%, rgba(69, 186, 236, 0.5) 93.86%), #FFF;
+    color: #FFF;
+
+    .icon{
+        background: center / contain no-repeat url(../elements/icons/checkbox-hover.svg);
+    }
+}
+
+.filter .filter-menu .filter-item.active{
+    background: linear-gradient(268deg, rgba(240, 193, 27, 0.5) 1.29%, rgba(235, 82, 49, 0.5) 50.95%, rgba(69, 186, 236, 0.5) 93.86%), #FFF;
+    color: #FFF;
+    
+    .icon{
+        background: center / contain no-repeat url(../elements/icons/checkbox-marked.svg);
+    }
+}
+
+.filter .filter-menu .clear-box{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFDEDE;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+    position: sticky;
+    top: 0;
+}
+
+.filter .filter-menu .clear{
+    width: 100%;
+
+    color: #5C0C0C;
+    font-family: Microsoft JhengHei;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.filter .filter-menu .clear-box:hover{
+    background-color: #5C0C0C;
+    .clear{
+        color: #FFDEDE;
+    }
+    .clear-icon{
+        background: center / contain no-repeat url(../elements/icons/cancel-hover.svg);
+    }
+}
+
+.filter .filter-menu .clear-icon{
+    height: 24px;
+    width: 24px;
+    background: center / contain no-repeat url(../elements/icons/cancel.svg);
+}
+
+.button-default{
+    display: block;
+    color: var(--major-yellow-tint-01, #FFF);
+    font-family: Microsoft JhengHei;
+    height: fit-content;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 24px */
+    padding: 24px 64px;
+    border-radius: 100px;
+    background: var(--major-yellow-main, #45BAEC);
+}
+
+.search-icon{
+    display: none;
+    background: center / contain no-repeat url(../elements/icons/search-icon.svg);
+    width: 48px;
+    height: 48px;
+}
+
+@media (max-width:1366px) {
+    .filter{
+        gap: 16px;
+    }
+    .filter .filtername{
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .filter .icon a{
+        width: 24px;
+        height: 24px;
+    }
+    .button-default{
+        font-size: 18px;
+        font-weight: 700;
+        padding: 16px 48px;
+    }
+    .filter .menuheader, .filter .filter-menu .clear-box{
+        padding: 16px 20px;
+    }
+    .filter .filter-menu{
+        top:64px;
+    }
+    .filter .filter-menu .filter-item{
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+    .filter .filter-menu .clear{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:1024px) {
+    .filter .event{
+        gap: 10px;
+    }
+    .filter .filtername{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .filter .icon a{
+        width: 24px;
+        height: 24px;
+    }
+    .button-default{
+        display: none;
+    }
+    .search-icon{
+        display: block;
+    }
+    .filter .menuheader, .filter .filter-menu .clear-box{
+        padding: 12px 16px;
+    }
+    .filter .filter-menu .filter-item{
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width:768px) {
+    .filter{
+        padding: 0;
+        gap: 16px;
+    }
+    .filter .event{
+        gap: 10px;
+    }
+    .filter .filtername{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .filter .icon a{
+        width: 24px;
+        height: 24px;
+    }
+    .filter .event.date{
+        display: none;
+    }
+    .filter .filter-menu .filter-item{
+        font-size: 14px;
+    }
+    .filter .filter-menu .clear{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:414px) {
+    .filter{
+        padding: 0;
+        gap: 8px;
+    }
+    .filter .event{
+        gap: 10px;
+    }
+    .filter .filtername{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .filter .icon a{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* --------------- sm-photobox css --------------- */
+
+.videoframe{
+    display: flex;
+    gap: 1%;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.videobox{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+    gap: 4px;
+    margin-bottom: 24px; 
+}
+
+.videobox a{
+    display: block;
+    height: 240px;
+    align-self: stretch;
+    border-radius: 12px;
+    position: relative;
+}
+
+.videobox .playbtn{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 200px;
+    top: 96px;
+    background-image: url(../elements/icons/play-button.svg);
+    opacity: 50%;
+}
+
+.videobox a:hover{
+    .playbtn{
+        opacity: 100%;
+    }
+}
+
+.videobox .row01-01{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 50%) 0%, rgba(0, 0, 0, 0.00) 100%), center / cover url(../elements/pictures/event-1.png);
+}
+
+.videobox .row01-02{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 50%) 0%, rgba(0, 0, 0, 0.00) 100%), center / cover url(../elements/pictures/event-2.png);
+}
+
+.videobox .row01-03{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 50%) 0%, rgba(0, 0, 0, 0.00) 100%), center / cover url(../elements/pictures/event-3.png);
+}
+
+.videobox .row01-04{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 50%) 0%, rgba(0, 0, 0, 0.00) 100%), center / cover url(../elements/pictures/event-4.png);
+}
+
+.videobox .event-info{
+    display: flex;
+    padding: 0px 8px;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+.videobox .event-name{
+    color: var(--bn-w-9, #0D0D0D);
+
+    /* Paragraphs/Bold */
+    font-family: Microsoft JhengHei;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 30px */
+}
+
+.videobox .event-date{
+    color: var(--bn-w-4, #999);
+
+    /* Body/Light */
+    font-family: Microsoft JhengHei;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 290;
+    line-height: 150%; /* 18px */
+}
+
+@media (max-width:1366px) {
+    .videobox{
+        width: 32.5%;
+        gap: 4px;
+        margin-bottom: 1%;
+    }
+    .videobox a{
+        height: 200px;
+        border-radius: 12px;
+    }
+    .videobox .playbtn{
+        width: 40px;
+        height: 40px;
+        left: 45.5%;
+        top: 40%;
+    }
+}
+
+@media (max-width:1024px) {
+    .photoframe{
+        gap: 1%;
+    }
+    .videobox{
+        width: 49.5%;
+        gap: 4px;
+        margin-bottom: 16px;
+    }
+    .videobox a{
+        height: 240px;
+        border-radius: 12px;
+    }
+    .videobox .event-info{
+        padding: 0px 8px;
+    }
+    .videobox .event-name{
+        font-size: 18px;
+    }
+    .videobox .event-date{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:768px) {
+    .videobox{
+        width: 100%;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    .videobox a{
+        height: 280px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width:414px) {
+    .videobox{
+        gap: 4px;
+    }
+    .videobox a{
+        height: 200px;
+        border-radius: 12px;
+    }
+    .videobox .event-name{
+        font-size: 16px;
+    }
+    .videobox .event-date{
+        font-size: 14px;
+    }
+}
+
+
+/* --------------- sm-photobox css --------------- */
+
+.mediaframe{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-self: stretch;
+}
+
+.sm-video-row{
+    display: flex;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.smvideobox{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 4px;
+    flex: 1 0 0;
+}
+
+.smvideobox .img-box1, .smvideobox .img-box2, .smvideobox .img-box3{
+    height: 240px;
+    align-self: stretch;
+    border-radius: 24px;
+    position: relative;
+}
+
+.smvideobox .img-box1{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), 
+    url(../Elements/Events/Desktop/Event\ Cover\ 1\ @1x.png);
+}
+
+.smvideobox .img-box2{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), 
+    url(../Elements/Events/Desktop/Event\ Cover\ 1\ @1x.png);
+}
+
+.smvideobox .img-box3{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), 
+    url(../Elements/Events/Desktop/Event\ Cover\ 1\ @1x.png);
+}
+
+.smvideobox .playbtn{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 212px;
+    top: 94px;
+    background-image: url(../Elements/Icons/Desktop/play-03.png);
+}
+
+.smvideobox .event-info{
+    display: flex;
+    padding: 0px 8px;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+.smvideobox .event-name{
+    color: var(--bn-w-9, #0D0D0D);
+
+    /* Paragraphs/Bold */
+    font-family: Microsoft JhengHei;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 30px */
+}
+
+.smvideobox .event-date{
+    color: var(--bn-w-4, #999);
+
+    /* Body/Light */
+    font-family: Microsoft JhengHei;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 290;
+    line-height: 150%; /* 18px */
+}
+
+/* --------------- xl-videobox css --------------- */
+
+.xl-video-row{
+    display: flex;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.xlvideobox{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1 0 0;
+    width: 50%;
+}
+
+.xlvideobox .img-box1{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), 
+    url(../Elements/Events/Desktop/Event\ Cover\ 1\ @1x.png);
+
+}
+
+.xlvideobox .img-box2{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), 
+    url(../Elements/Events/Desktop/Event\ Cover\ 1\ @1x.png);
+}
+
+.xlvideobox .img-box1, 
+.xlvideobox .img-box2{
+    height: 360px;
+    align-self: stretch;
+    border-radius: 24px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.xlvideobox .playbtn{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 334px;
+    top: 160px;
+    background-image: url(../Elements/Icons/Desktop/play-03.png);
+}
+
+.xlvideobox .event-info{
+    display: flex;
+    padding: 0px 8px;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+.xlvideobox .event-name{
+    color: var(--bn-w-9, #0D0D0D);
+
+    /* Paragraphs/Bold */
+    font-family: Microsoft JhengHei;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 30px */
+}
+
+.xlvideobox .event-date{
+    color: var(--bn-w-4, #999);
+
+    /* Body/Light */
+    font-family: Microsoft JhengHei;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 290;
+    line-height: 150%; /* 18px */
+}
